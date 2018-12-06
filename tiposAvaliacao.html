@@ -1,0 +1,27 @@
+<main>
+    <form ng-controller="ListarEscolaCtrl">
+        <!-- Tabela de Escolas -->
+        <div class="box">
+            <table class="table table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Avaliações</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="escola in escolas">
+                        <td scope="row">{{escola.cod}}</td>
+                        <td scope="row">{{escola.nome}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="listarEscola()">
+            Listar
+        </button>
+    </form>
+</main>
